@@ -45,7 +45,7 @@ module Wicked
         def previous_wizard_steps(step)
           #cast the incoming step to a symbol
           step = step.to_sym if step.is_a?(String)
-          self.all_wizard_steps.slice(0,self.all_wizard_steps.index(step))
+          self.all_wizard_steps.slice(0, self.all_wizard_steps.index(step)||0)
         end
 
         # This is where the meat of the work happens.
